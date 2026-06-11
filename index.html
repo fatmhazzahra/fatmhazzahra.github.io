@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatimah Azzahra | Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bgMain: "#F8FAFC",
+              primaryNavy: "#1E3A5F",
+              accentBlue: "#3B82F6",
+              accentTeal: "#2A9D8F",
+              textMain: "#334155",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      /* Container halaman SPA */
+      .page-container {
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        display: none;
+      }
+
+      .page-container.active {
+        display: block;
+        animation: fadeIn 0.4s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .nav-link.active {
+        color: #2a9d8f;
+        font-weight: 700;
+      }
+
+      /* Hero Full Background */
+      .hero-backdrop {
+        background-image:
+          linear-gradient(to right, rgba(30, 58, 95, 0.9) 20%, rgba(30, 58, 95, 0.4)),
+          url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask2104%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient2105%26quot%3b)'%3e%3c/rect%3e%3cpath d='M585.929%2c1287.631C654.183%2c1286.3%2c712.55%2c1244.064%2c747.306%2c1185.307C782.791%2c1125.319%2c795.829%2c1051.426%2c761.548%2c990.742C726.782%2c929.2%2c656.514%2c895.911%2c585.929%2c899.637C521.063%2c903.061%2c472.782%2c951.809%2c439.736%2c1007.731C405.933%2c1064.935%2c382.509%2c1132.925%2c413.27%2c1191.82C445.93%2c1254.35%2c515.396%2c1289.006%2c585.929%2c1287.631' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1885.9574048613927-118.92874431079707L1622.5936807579642-165.36687461009177 1839.519274562098 144.4349797926314z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M902.239656515736 203.84495872340915L1191.3613083683958 173.45704860668621 1160.9733982516727-115.66460324597358 871.8517463990131-85.27669312925065z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1132.1166103887404 179.94780425480693L1108.1254598315452 408.2083543320865 1360.3771604660199 203.93895481200204z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1901.9781192073708 114.51508007830695L1764.0786540080717 41.19263381076573 1723.0447172064094 284.7030547434852z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1467.9787272675615 19.302462973286083L1462.3521124736885 341.65100862533245 1784.700658125735 347.27762341920544 1790.3272729196078 24.92907776715906z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M-73.44003950492811 1119.170859892552L227.46371038176233 1066.1134101911769 174.4062606803871 765.2096603044863-126.49748920630334 818.2671100058616z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1265.2239783120115 250.22711221056198L988.2126910498957 416.6722857524983 1154.657864591832 693.683573014614 1431.6691518539478 527.2383994726778z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M919.7659179338737 595.9272035792889L837.7835892915496 448.02716762017985 689.8835533324404 530.009496262504 771.8658819747646 677.9095322216131z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M690.6953572398975 1035.9788646231457L838.8266785545271 1206.3844567833996 1009.2322707147812 1058.25313546877 861.1009494001515 887.847543308516z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M293.417%2c1187.676C377.144%2c1183.253%2c453.696%2c1138.522%2c493.227%2c1064.582C530.683%2c994.524%2c518.784%2c910.822%2c477.825%2c842.753C438.251%2c776.985%2c370.169%2c733.344%2c293.417%2c732.519C215.219%2c731.678%2c145.788%2c773.912%2c102.007%2c838.711C51.242%2c913.847%2c9.753%2c1008.314%2c53.361%2c1087.818C98.032%2c1169.259%2c200.658%2c1192.576%2c293.417%2c1187.676' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1412.103%2c622.349C1456.47%2c625.812%2c1509.697%2c626.939%2c1531.951%2c588.401C1554.207%2c549.861%2c1526.419%2c504.463%2c1501.455%2c467.619C1480.312%2c436.414%2c1449.796%2c411.469%2c1412.103%2c411.519C1374.49%2c411.569%2c1341.77%2c435.169%2c1323.163%2c467.857C1304.766%2c500.176%2c1302.244%2c539.692%2c1320.798%2c571.921C1339.39%2c604.217%2c1374.951%2c619.449%2c1412.103%2c622.349' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M244.67711144184426 261.0302005624966L498.8098585580789 274.3487334819572 512.1283914775395 20.21598636572253 257.99564436130487 6.897453446261949z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1411.61%2c1245.949C1472.63%2c1242.965%2c1520.57%2c1198.514%2c1549.364%2c1144.632C1576.347%2c1094.141%2c1580.695%2c1033.576%2c1551.381%2c984.402C1522.714%2c936.313%2c1467.576%2c915.019%2c1411.61%2c913.549C1352.463%2c911.996%2c1291.251%2c927.424%2c1258.517%2c976.711C1222.36%2c1031.151%2c1216.052%2c1102.543%2c1248.356%2c1159.354C1280.99%2c1216.747%2c1345.667%2c1249.174%2c1411.61%2c1245.949' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M793.340303040404 996.3861010915014L780.7055106628662 755.2999007146354 539.6193102860003 767.9346930921733 552.2541026635381 1009.0208934690392z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M914.5094129087126 898.6182955912906L1051.2365354611863 795.5870186329729 828.326058747473 642.0119732834212z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask2104'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2105'%3e%3cstop stop-color='rgba(243%2c 243%2c 243%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 0.9)' offset='0.84'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Custom Scrollbar */
+      .page-container::-webkit-scrollbar {
+        width: 6px;
+      }
+      .page-container::-webkit-scrollbar-track {
+        background: #f8fafc;
+      }
+      .page-container::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="bg-bgMain text-textMain font-sans">
+    <!-- NAVBAR -->
+    <nav class="h-[80px] bg-white/90 backdrop-blur-sm border-b border-gray-100 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
+      <!-- Logo FAZ (Clickable on mobile to toggle menu) -->
+      <div onclick="toggleMobileMenu()" class="cursor-pointer flex items-center group">
+        <div class="text-3xl font-black text-primaryNavy tracking-tighter">FA<span class="text-accentTeal">Z</span></div>
+        <!-- Ikon panah kecil hanya muncul di mobile sebagai penanda -->
+        <i class="fas fa-chevron-down ml-2 text-xs text-accentTeal md:hidden transition-transform group-hover:scale-110"></i>
+      </div>
+
+      <!-- Menu & Sosmed (Desktop - Hidden on mobile) -->
+      <div class="flex items-center space-x-10">
+        <div class="hidden md:flex space-x-8 text-[12px] font-bold uppercase tracking-widest text-primaryNavy/70">
+          <button onclick="changePage('home')" id="nav-home" class="nav-link active hover:text-accentTeal transition-all">Home</button>
+          <button onclick="changePage('projects')" id="nav-projects" class="nav-link hover:text-accentTeal transition-all">Projects</button>
+          <button onclick="changePage('articles')" id="nav-articles" class="nav-link hover:text-accentTeal transition-all">Articles</button>
+          <button onclick="changePage('resume')" id="nav-resume" class="nav-link hover:text-accentTeal transition-all">Resume</button>
+          <button onclick="changePage('contact')" id="nav-contact" class="nav-link hover:text-accentTeal transition-all">Contact</button>
+        </div>
+
+        <!-- Social Linked Icons (Tetap muncul di kanan) -->
+        <div class="flex items-center space-x-5 text-lg md:border-l md:pl-8 border-gray-200 text-primaryNavy">
+          <a href="https://linkedin.com/in/fatmhazzahra" target="_blank" class="hover:text-accentBlue transition-all"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/fatmhazzahra" target="_blank" class="hover:text-accentBlue transition-all"><i class="fab fa-github"></i></a>
+          <a href="https://medium.com/@fatmhazzahra" target="_blank" class="hover:text-accentBlue transition-all"><i class="fab fa-medium"></i></a>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU DROPDOWN (Hidden by default) -->
+      <div id="mobile-menu" class="hidden absolute top-[80px] left-0 w-full bg-white border-b border-gray-100 shadow-xl flex flex-col md:hidden z-40 p-6 space-y-4">
+        <button onclick="changePage('home')" class="text-left font-bold text-primaryNavy uppercase tracking-widest text-sm py-2">Home</button>
+        <button onclick="changePage('projects')" class="text-left font-bold text-primaryNavy uppercase tracking-widest text-sm py-2">Projects</button>
+        <button onclick="changePage('articles')" class="text-left font-bold text-primaryNavy uppercase tracking-widest text-sm py-2">Articles</button>
+        <button onclick="changePage('resume')" class="text-left font-bold text-primaryNavy uppercase tracking-widest text-sm py-2">Resume</button>
+        <button onclick="changePage('contact')" class="text-left font-bold text-primaryNavy uppercase tracking-widest text-sm py-2">Contact</button>
+      </div>
+    </nav>
+
+    <!-- CONTENT: HOME -->
+    <div id="home" class="page-container active">
+      <!-- HERO AREA -->
+      <section class="hero-backdrop min-h-[85vh] flex items-center px-6 md:px-20 py-12">
+        <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-12">
+          <!-- Text Left -->
+          <div class="flex-1 text-white">
+            <h2 class="text-accentTeal font-bold tracking-[0.4em] uppercase text-xs mb-4">Data Analyst Portfolio</h2>
+            <!-- Update Bold Styling Disini -->
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-[1.1]">
+              Turning Data <br />
+              <span class="text-white/60 font-normal">Into <span class="font-extrabold text-white">Actionable Insights</span></span>
+            </h1>
+            <p class="text-lg text-white/80 max-w-xl mb-10 leading-relaxed font-light">Hi, I'm Fatimah Azzahra, a Data Analyst enthusiast with experience in   end-to-end data analytics and machine learning projects.   I enjoy uncovering patterns and transforming data into meaningful business insights.</p>
+            <div class="flex gap-4">
+              <button onclick="changePage('projects')" class="bg-accentTeal text-white px-8 py-4 rounded-md font-bold hover:shadow-lg transition-all text-xs uppercase tracking-widest">Explore Projects</button>
+              <button
+                onclick="changePage('resume')"
+                class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-md font-bold hover:bg-white hover:text-primaryNavy transition-all text-xs uppercase tracking-widest"
+              >
+                About Me
+              </button>
+            </div>
+          </div>
+          <!-- Profile Card Right -->
+          <div class="flex-1 flex justify-center md:justify-end">
+            <div class="bg-white p-3 rounded-[32px] shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+              <div class="relative overflow-hidden rounded-[24px] w-64 h-80 md:w-80 md:h-[400px]">
+                <!-- Ganti dengan foto profilmu -->
+                <img src="img/senyum_edit.png" alt="Fatimah Azzahra" class="w-full h-full object-cover" />
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primaryNavy/80 to-transparent p-6 text-white">
+                  <p class="font-bold text-lg">Fatimah Azzahra</p>
+                  <p class="text-xs opacity-80 tracking-widest uppercase">Data Analyst</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS & TOOLS (Update: Grid changed to 5 cols) -->
+      <section class="py-24 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-extrabold text-primaryNavy uppercase tracking-tight">Technical Proficiency</h2>
+            <div class="h-1 w-12 bg-accentTeal mx-auto mt-4"></div>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+            <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
+              <i class="fab fa-python text-4xl text-accentBlue mb-4 group-hover:text-white"></i>
+              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">Python</h4>
+            </div>
+            <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
+              <i class="fas fa-database text-4xl text-accentTeal mb-4 group-hover:text-white"></i>
+              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">SQL</h4>
+            </div>
+            <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
+              <i class="fas fa-file-excel text-4xl text-accentBlue mb-4 group-hover:text-white"></i>
+              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">Excel</h4>
+            </div>
+            <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
+              <i class="fas fa-chart-pie text-4xl text-accentTeal mb-4 group-hover:text-white"></i>
+              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">Tableau</h4>
+            </div>
+            <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
+              <i class="fas fa-microchip text-4xl text-accentBlue mb-4 group-hover:text-white"></i>
+              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">Machine Learning</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-primaryNavy mb-12">Featured Case Studies</h2>
+          <div class="grid md:grid-cols-2 gap-12">
+            <div class="group cursor-pointer" onclick="changePage('projects')">
+              <div class="overflow-hidden rounded-3xl aspect-video bg-gray-200 mb-6 shadow-sm group-hover:shadow-xl transition-all">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+              </div>
+              <h3 class="text-2xl font-bold text-primaryNavy group-hover:text-accentTeal transition-colors">Bank Deposit Campaign</h3>
+              <p class="text-textMain mt-3 leading-relaxed text-sm md:text-base">Developed a classification model to predict customer subscription to term deposits using historical marketing campaign data.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER HOME -->
+      <footer class="py-12 border-t border-gray-100 text-center px-6">
+        <p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; 2026 &bull; All Rights Reserved</p>
+      </footer>
+    </div>
+
+    <!-- CONTENT: PROJECTS GRID -->
+    <div id="projects" class="page-container bg-white">
+      <section class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-5xl font-extrabold text-primaryNavy mb-4 tracking-tighter">Projects Archive</h2>
+        <p class="text-gray-400 mb-12 text-lg italic">Menampilkan seluruh eksplorasi data & dashboard.</p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Project Card -->
+          <div class="bg-bgMain p-6 rounded-3xl border border-transparent hover:border-accentTeal transition-all group">
+            <div class="h-44 bg-gray-200 rounded-2xl mb-6"></div>
+            <span class="text-[10px] font-black text-accentTeal uppercase tracking-widest">Dashboard</span>
+            <h4 class="text-xl font-bold text-primaryNavy mt-1">E-Commerce Analytics</h4>
+          </div>
+        </div>
+      </section>
+      <footer class="py-12 text-center bg-bgMain/30 px-6"><p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; End of Projects</p></footer>
+    </div>
+
+    <!-- CONTENT: ARTICLES -->
+    <div id="articles" class="page-container">
+      <section class="h-[70vh] flex items-center justify-center px-6">
+        <div class="max-w-4xl w-full bg-primaryNavy p-8 md:p-16 rounded-[40px] text-white text-center relative overflow-hidden shadow-2xl">
+          <div class="relative z-10">
+            <span class="text-accentTeal font-bold uppercase tracking-[0.3em] text-[10px]">Medium Publication</span>
+            <h2 class="text-2xl md:text-4xl font-extrabold mt-6 mb-8 leading-snug">"Data is the New Oil, but Insight is the Engine"</h2>
+            <p class="text-white/60 mb-10 max-w-xl mx-auto text-sm md:text-base">Panduan mendalam tentang bagaimana memilih metrik yang tepat untuk pertumbuhan startup.</p>
+            <a href="#" target="_blank" class="inline-block bg-accentTeal text-white px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 transition-all">Read Full Article</a>
+          </div>
+          <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accentBlue/20 rounded-full blur-3xl"></div>
+        </div>
+      </section>
+      <footer class="py-12 text-center px-6"><p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; Data Storytelling</p></footer>
+    </div>
+
+    <!-- CONTENT: RESUME -->
+    <div id="resume" class="page-container">
+      <section class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-20">
+          <div>
+            <h2 class="text-4xl font-extrabold text-primaryNavy mb-8 tracking-tighter text-center md:text-left">Brief Biography</h2>
+            <p class="text-lg md:text-xl text-textMain leading-relaxed font-light text-center md:text-left">
+              Saya adalah seorang komunikator data. Fokus utama saya adalah menjembatani kesenjangan antara dataset teknis yang kompleks dengan pemahaman bisnis yang intuitif.
+            </p>
+          </div>
+          <div class="bg-white p-10 rounded-[32px] border border-gray-100 shadow-sm">
+            <h4 class="font-bold text-accentTeal uppercase text-[10px] tracking-[0.3em] mb-6">Technical Facts</h4>
+            <ul class="space-y-4 font-medium text-sm text-primaryNavy">
+              <li class="flex justify-between border-b pb-2"><span>Edukasi</span> <span class="text-gray-400">S1 Matematika</span></li>
+              <li class="flex justify-between border-b pb-2"><span>Domisili</span> <span class="text-gray-400">Bogor, Indonesia</span></li>
+              <li class="flex justify-between border-b pb-2"><span>Sertifikasi</span> <span class="text-gray-400">Purwadhika Data Science & Machine Learning Bootcamp</span></li>
+            </ul>
+            <button class="w-full mt-10 bg-primaryNavy text-white py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest hover:bg-accentBlue transition-all text-center">Download Curriculum Vitae</button>
+          </div>
+        </div>
+      </section>
+      <footer class="py-12 text-center px-6"><p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; Resume Overview</p></footer>
+    </div>
+
+    <!-- CONTENT: CONTACT -->
+    <div id="contact" class="page-container">
+      <section class="h-[75vh] flex flex-col items-center justify-center text-center px-6">
+        <div class="mb-10 text-accentTeal text-5xl">
+          <i class="far fa-envelope-open"></i>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-extrabold text-primaryNavy mb-6 tracking-tighter italic">Let's Connect.</h2>
+        <p class="text-gray-500 max-w-lg mb-12 text-base md:text-lg font-light">Selalu terbuka untuk kolaborasi proyek data, diskusi statistik, atau sekadar berbagi wawasan industri.</p>
+
+        <a href="mailto:fatmhazzahra21@gmail.com" class="bg-accentBlue text-white px-12 py-5 rounded-full text-sm font-bold uppercase tracking-[0.3em] shadow-xl hover:bg-primaryNavy transition-all"> Send Me an Email </a>
+      </section>
+      <footer class="py-12 text-center px-6"><p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; Available for Hire</p></footer>
+    </div>
+
+    <script>
+      // Fungsi Baru: Munculkan menu saat Logo FAZ diklik (untuk HP)
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      function changePage(pageId) {
+        // Sembunyikan semua halaman
+        document.querySelectorAll(".page-container").forEach((page) => page.classList.remove("active"));
+
+        // Tampilkan halaman target
+        const targetPage = document.getElementById(pageId);
+        targetPage.classList.add("active");
+        targetPage.scrollTop = 0;
+
+        // Update Nav Active State (Desktop)
+        document.querySelectorAll(".nav-link").forEach((link) => link.classList.remove("active"));
+        const desktopNavLink = document.getElementById("nav-" + pageId);
+        if (desktopNavLink) desktopNavLink.classList.add("active");
+
+        // Sembunyikan mobile menu setelah klik link
+        document.getElementById("mobile-menu").classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
