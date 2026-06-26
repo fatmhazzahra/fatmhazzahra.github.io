@@ -1,8 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tambahkan baris ini -->
+    <link rel="icon" type="image/png" href="img/logo17.png" />
+
+    <!-- Beri judul yang muncul di samping logo -->
     <title>Fatimah Azzahra | Data Analyst</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -104,9 +108,9 @@
 
         <!-- Social Linked Icons (Tetap muncul di kanan) -->
         <div class="flex items-center space-x-5 text-lg md:border-l md:pl-8 border-gray-200 text-primaryNavy">
-          <a href="https://linkedin.com/in/fatmhazzahra" target="_blank" class="hover:text-accentBlue transition-all"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/fatimahazzahrafaza/" target="_blank" class="hover:text-accentBlue transition-all"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/fatmhazzahra" target="_blank" class="hover:text-accentBlue transition-all"><i class="fab fa-github"></i></a>
-          <a href="https://medium.com/@fatmhazzahra" target="_blank" class="hover:text-accentBlue transition-all"><i class="fab fa-medium"></i></a>
+          <a href="https://medium.com/@fatmhazzahra21" target="_blank" class="hover:text-accentBlue transition-all"><i class="fab fa-medium"></i></a>
         </div>
       </div>
 
@@ -133,7 +137,9 @@
               Turning Data <br />
               <span class="text-white/60 font-normal">Into <span class="font-extrabold text-white">Actionable Insights</span></span>
             </h1>
-            <p class="text-lg text-white/80 max-w-xl mb-10 leading-relaxed font-light">Hi, I'm Fatimah Azzahra, a Data Analyst enthusiast with experience in   end-to-end data analytics and machine learning projects.   I enjoy uncovering patterns and transforming data into meaningful business insights.</p>
+            <p class="text-lg text-white/80 max-w-xl mb-10 leading-relaxed font-light">
+              Hi, I'm Fatimah Azzahra, a Data Analyst enthusiast with experience in end-to-end data analytics and machine learning projects. I enjoy uncovering patterns and transforming data into meaningful business insights.
+            </p>
             <div class="flex gap-4">
               <button onclick="changePage('projects')" class="bg-accentTeal text-white px-8 py-4 rounded-md font-bold hover:shadow-lg transition-all text-xs uppercase tracking-widest">Explore Projects</button>
               <button
@@ -169,16 +175,16 @@
           </div>
           <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
             <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
-              <i class="fab fa-python text-4xl text-accentBlue mb-4 group-hover:text-white"></i>
-              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">Python</h4>
+              <i class="fas fa-file-excel text-4xl text-accentBlue mb-4 group-hover:text-white"></i>
+              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">Excel</h4>
             </div>
             <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
               <i class="fas fa-database text-4xl text-accentTeal mb-4 group-hover:text-white"></i>
               <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">SQL</h4>
             </div>
             <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
-              <i class="fas fa-file-excel text-4xl text-accentBlue mb-4 group-hover:text-white"></i>
-              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">Excel</h4>
+              <i class="fab fa-python text-4xl text-accentBlue mb-4 group-hover:text-white"></i>
+              <h4 class="font-bold text-sm tracking-widest uppercase group-hover:text-white text-primaryNavy">Python</h4>
             </div>
             <div class="p-8 bg-bgMain rounded-2xl text-center group hover:bg-primaryNavy transition-all">
               <i class="fas fa-chart-pie text-4xl text-accentTeal mb-4 group-hover:text-white"></i>
@@ -193,17 +199,35 @@
       </section>
 
       <!-- FEATURED PROJECTS -->
-      <section class="py-24 px-6">
+      <section class="pt-10 pb-20 px-6 max-w-6xl mx-auto">
         <div class="max-w-6xl mx-auto">
-          <h2 class="text-3xl font-extrabold text-primaryNavy mb-12">Featured Case Studies</h2>
+          <!-- Header Section: Judul & Link -->
+          <div class="flex justify-between items-end mb-12">
+            <h2 class="text-3xl font-extrabold text-primaryNavy">Featured Case Studies</h2>
+            <!-- <a href="projects.html" class="text-accentTeal font-semibold hover:underline flex items-center gap-2 transition-all">
+          All Projects
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a> -->
+
+            <a href="javascript:void(0)" onclick="changePage('projects')" class="text-accentTeal font-semibold hover:underline flex items-center gap-2 transition-all">
+              All Projects
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+
           <div class="grid md:grid-cols-2 gap-12">
-            <div class="group cursor-pointer" onclick="changePage('projects')">
+            <!-- Project Card -->
+            <a href="https://github.com/fatmhazzahra/Bank_Deposit_Marketing_Campaign" target="_blank" class="group block cursor-pointer">
               <div class="overflow-hidden rounded-3xl aspect-video bg-gray-200 mb-6 shadow-sm group-hover:shadow-xl transition-all">
-                <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+                <img src="img/projects/deposit.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
               </div>
               <h3 class="text-2xl font-bold text-primaryNavy group-hover:text-accentTeal transition-colors">Bank Deposit Campaign</h3>
-              <p class="text-textMain mt-3 leading-relaxed text-sm md:text-base">Developed a classification model to predict customer subscription to term deposits using historical marketing campaign data.</p>
-            </div>
+              <p class="text-textMain mt-3 leading-relaxed text-sm md:text-base">Developed a classification model to predict customer subscription' to term deposits using historical marketing campaign data.</p>
+            </a>
           </div>
         </div>
       </section>
@@ -216,59 +240,179 @@
 
     <!-- CONTENT: PROJECTS GRID -->
     <div id="projects" class="page-container bg-white">
-      <section class="py-20 px-6 max-w-6xl mx-auto">
+      <section class="pt-10 pb-20 px-6 max-w-6xl mx-auto">
         <h2 class="text-5xl font-extrabold text-primaryNavy mb-4 tracking-tighter">Projects Archive</h2>
-        <p class="text-gray-400 mb-12 text-lg italic">Menampilkan seluruh eksplorasi data & dashboard.</p>
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Project Card -->
-          <div class="bg-bgMain p-6 rounded-3xl border border-transparent hover:border-accentTeal transition-all group">
-            <div class="h-44 bg-gray-200 rounded-2xl mb-6"></div>
-            <span class="text-[10px] font-black text-accentTeal uppercase tracking-widest">Dashboard</span>
-            <h4 class="text-xl font-bold text-primaryNavy mt-1">E-Commerce Analytics</h4>
-          </div>
+        <!-- <p class="text-gray-400 mb-12 text-lg italic">Menampilkan seluruh eksplorasi data & dashboard.</p> -->
+
+        <!-- Grid System: 1 kolom di HP, 3 kolom di Desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          <a
+            href="https://github.com/fatmhazzahra/RFM_Analysis_Insight_into_E-Commerce_Customer_Behavior_and_Sales_Analysis"
+            target="_blank"
+            class="bg-bgMain p-6 rounded-3xl border border-transparent hover:border-accentTeal transition-all group block"
+          >
+            <div class="h-44 overflow-hidden rounded-2xl mb-6 bg-gray-200">
+              <!-- Gambar Project -->
+              <img src="img/projects/churn2.jpg" alt="E-Commerce" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500" />
+            </div>
+            <span class="text-[10px] font-black text-accentTeal uppercase tracking-widest">RFM Analysis</span>
+            <h4 class="text-xl font-bold text-primaryNavy mt-1 group-hover:text-accentTeal transition-colors">E-Commerce Analytics</h4>
+            <p class="text-sm text-gray-500 mt-2 line-clamp-2">Analisis RFM menggunakan data transaksi bulanan E-commerce.</p>
+          </a>
+
+          <!-- Project Card 2 -->
+          <a href="https://github.com/fatmhazzahra/Machine_Learning_Prediction_Churn_Classification" target="_blank" class="bg-bgMain p-6 rounded-3xl border border-transparent hover:border-accentTeal transition-all group block">
+            <div class="h-44 overflow-hidden rounded-2xl mb-6 bg-gray-200">
+              <img src="img/projects/telco3.jpg" alt="Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500" />
+            </div>
+            <span class="text-[10px] font-black text-accentTeal uppercase tracking-widest">Classification ML</span>
+            <h4 class="text-xl font-bold text-primaryNavy mt-1 group-hover:text-accentTeal transition-colors">Telecommunication Customer Churn Analysis</h4>
+            <p class="text-sm text-gray-500 mt-2 line-clamp-2">Analyzed customer behaviour and service usage data to identify churn patterns and retention opportunities.</p>
+          </a>
+
+          <!-- Project Card 3 -->
+          <a href="https://github.com/fatmhazzahra/ML_Regresi_Prediksi_Harga_Apartemen_Daegu" target="_blank" class="bg-bgMain p-6 rounded-3xl border border-transparent hover:border-accentTeal transition-all group block">
+            <div class="h-44 overflow-hidden rounded-2xl mb-6 bg-gray-200">
+              <img src="img/projects/apt.jpg" alt="Real Estate" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500" />
+            </div>
+            <span class="text-[10px] font-black text-accentTeal uppercase tracking-widest">Regression ML</span>
+            <h4 class="text-xl font-bold text-primaryNavy mt-1 group-hover:text-accentTeal transition-colors">Apartment Price Prediction</h4>
+            <p class="text-sm text-gray-500 mt-2 line-clamp-2">. .</p>
+          </a>
+
+          <!-- Project Card 4 -->
+          <a href="https://github.com/fatmhazzahra/Bank_Deposit_Marketing_Campaign" target="_blank" class="bg-bgMain p-6 rounded-3xl border border-transparent hover:border-accentTeal transition-all group block">
+            <div class="h-44 overflow-hidden rounded-2xl mb-6 bg-gray-200">
+              <img src="img/projects/deposit.jpg" alt="Bank" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500" />
+            </div>
+            <span class="text-[10px] font-black text-accentTeal uppercase tracking-widest">Classification ML</span>
+            <h4 class="text-xl font-bold text-primaryNavy mt-1 group-hover:text-accentTeal transition-colors">Bank Marketing Campaign: Term Deposit Prediction</h4>
+            <p class="text-sm text-gray-500 mt-2 line-clamp-2">Analyzed customer behavior and historical data marketing campaign performance to identify factors influencing product subscriptions.</p>
+          </a>
+
+          <!-- Project Card 5 (Otomatis turun ke baris baru) -->
+          <a href="https://github.com/fatmhazzahra/Analisis_Wacana_Kenaikan_Tarif_Transjakarta" target="_blank" class="bg-bgMain p-6 rounded-3xl border border-transparent hover:border-accentTeal transition-all group block">
+            <div class="h-44 overflow-hidden rounded-2xl mb-6 bg-gray-200">
+              <img src="img/projects/tj.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500" />
+            </div>
+            <span class="text-[10px] font-black text-accentTeal uppercase tracking-widest">Data Analysis</span>
+            <h4 class="text-xl font-bold text-primaryNavy mt-1 group-hover:text-accentTeal transition-colors">Transjakarta Fare Adjustment Scenario Analysis</h4>
+            <p class="text-sm text-gray-500 mt-2 line-clamp-2">Assessed the operational and financial impact of multiple fare adjustment scenarios.</p>
+          </a>
         </div>
       </section>
-      <footer class="py-12 text-center bg-bgMain/30 px-6"><p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; End of Projects</p></footer>
+
+      <footer class="py-12 text-center bg-bgMain/30 px-6">
+        <p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; End of Projects</p>
+      </footer>
     </div>
 
     <!-- CONTENT: ARTICLES -->
-    <div id="articles" class="page-container">
-      <section class="h-[70vh] flex items-center justify-center px-6">
-        <div class="max-w-4xl w-full bg-primaryNavy p-8 md:p-16 rounded-[40px] text-white text-center relative overflow-hidden shadow-2xl">
-          <div class="relative z-10">
-            <span class="text-accentTeal font-bold uppercase tracking-[0.3em] text-[10px]">Medium Publication</span>
-            <h2 class="text-2xl md:text-4xl font-extrabold mt-6 mb-8 leading-snug">"Data is the New Oil, but Insight is the Engine"</h2>
-            <p class="text-white/60 mb-10 max-w-xl mx-auto text-sm md:text-base">Panduan mendalam tentang bagaimana memilih metrik yang tepat untuk pertumbuhan startup.</p>
-            <a href="#" target="_blank" class="inline-block bg-accentTeal text-white px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 transition-all">Read Full Article</a>
-          </div>
-          <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accentBlue/20 rounded-full blur-3xl"></div>
+    <div id="articles" class="page-container bg-gray-50">
+      <section class="pt-10 pb-20 px-6 max-w-6xl mx-auto">
+        <!-- Header Section -->
+        <div class="mb-16">
+          <span class="text-accentTeal font-bold uppercase tracking-[0.3em] text-[10px]">Medium Publication</span>
+          <h2 class="text-5xl font-extrabold text-primaryNavy mt-2 tracking-tighter">Writing & Insights</h2>
+          <p class="text-gray-500 mt-4 max-w-2xl">Sharing thoughts on data science, visualization, and analytical strategies for business growth.</p>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Article 1 (Copy ini untuk nambah artikel baru) -->
+          <a href="https://medium.com/@rizan.pradiya/mengenal-modul-python-itertools-cceba59ce505" target="_blank" class="group flex flex-col">
+            <div class="relative overflow-hidden rounded-[32px] mb-6 aspect-[4/3] bg-primaryNavy shadow-lg">
+              <!-- Background Pattern/Image -->
+              <div class="absolute inset-0 opacity-40 group-hover:scale-110 transition-transform duration-700 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+              <!-- Overlay Gradasi -->
+              <div class="absolute inset-0 bg-gradient-to-t from-primaryNavy via-transparent to-transparent"></div>
+              <!-- Label di Atas Gambar -->
+              <div class="absolute bottom-6 left-6">
+                <span class="bg-accentTeal text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Python</span>
+              </div>
+            </div>
+
+            <div class="px-2">
+              <div class="flex items-center gap-4 text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-3">
+                <span>Oct 29, 2025</span>
+                <span>•</span>
+                <span>5 Min Read</span>
+              </div>
+              <h3 class="text-2xl font-bold text-primaryNavy group-hover:text-accentTeal transition-colors leading-tight mb-3">Mengenal Modul Python: Itertools</h3>
+              <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">Panduan mendalam tentang penggunaan modul itertools dalam Python untuk mempermudah operasi pada iterables.</p>
+              <div class="mt-6 flex items-center text-accentTeal font-bold text-xs uppercase tracking-widest group-hover:gap-3 transition-all duration-300">Read Article <span class="ml-2">&rarr;</span></div>
+            </div>
+          </a>
         </div>
       </section>
-      <footer class="py-12 text-center px-6"><p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; Data Storytelling</p></footer>
+
+      <footer class="py-12 text-center px-6">
+        <p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; Data Storytelling</p>
+      </footer>
     </div>
 
     <!-- CONTENT: RESUME -->
     <div id="resume" class="page-container">
-      <section class="py-20 px-6 max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-20">
+      <section class="pt-10 pb-20 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+          <!-- Kolom Kiri: Biografi -->
           <div>
             <h2 class="text-4xl font-extrabold text-primaryNavy mb-8 tracking-tighter text-center md:text-left">Brief Biography</h2>
             <p class="text-lg md:text-xl text-textMain leading-relaxed font-light text-center md:text-left">
-              Saya adalah seorang komunikator data. Fokus utama saya adalah menjembatani kesenjangan antara dataset teknis yang kompleks dengan pemahaman bisnis yang intuitif.
+              My interest in data analytics grew from a curiosity about how data can explain real-world problems and support better decision-making. Through hands-on projects, I have gained experience in data cleaning, exploratory data
+              analysis, dashboard development, and predictive modeling. I enjoy approaching challenges with a data-driven mindset and am eager to contribute to solutions that create meaningful business impact while continuing to grow as a
+              data professional.
             </p>
           </div>
-          <div class="bg-white p-10 rounded-[32px] border border-gray-100 shadow-sm">
-            <h4 class="font-bold text-accentTeal uppercase text-[10px] tracking-[0.3em] mb-6">Technical Facts</h4>
-            <ul class="space-y-4 font-medium text-sm text-primaryNavy">
-              <li class="flex justify-between border-b pb-2"><span>Edukasi</span> <span class="text-gray-400">S1 Matematika</span></li>
-              <li class="flex justify-between border-b pb-2"><span>Domisili</span> <span class="text-gray-400">Bogor, Indonesia</span></li>
-              <li class="flex justify-between border-b pb-2"><span>Sertifikasi</span> <span class="text-gray-400">Purwadhika Data Science & Machine Learning Bootcamp</span></li>
-            </ul>
-            <button class="w-full mt-10 bg-primaryNavy text-white py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest hover:bg-accentBlue transition-all text-center">Download Curriculum Vitae</button>
+
+          <!-- Kolom Kanan: Technical Facts Card -->
+          <div class="bg-white p-8 md:p-10 rounded-[32px] border border-gray-100 shadow-sm flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-accentTeal uppercase text-[10px] tracking-[0.3em] mb-8">Technical Facts</h4>
+
+              <ul class="space-y-6 text-sm text-primaryNavy">
+                <!-- Edukasi -->
+                <li class="flex justify-between items-start border-b pb-4">
+                  <span class="font-bold">Education</span>
+                  <span class="text-gray-400 text-right">S1 Mathematics, IPB University</span>
+                </li>
+
+                <!-- Domisili -->
+                <li class="flex justify-between items-start border-b pb-4">
+                  <span class="font-bold">Residence</span>
+                  <span class="text-gray-400 text-right">Bogor, Indonesia</span>
+                </li>
+
+                <!-- Sertifikasi (Struktur diubah untuk menampung banyak list) -->
+                <li class="border-b pb-4">
+                  <span class="font-bold block mb-3">Certifications</span>
+                  <div class="space-y-3 text-gray-400 font-normal leading-relaxed">
+                    <div class="flex gap-2">
+                      <span class="text-accentTeal">•</span>
+                      <span>Purwadhika Data Science & Machine Learning Bootcamp</span>
+                    </div>
+
+                    <!-- Tambah sertifikat lain di sini -->
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tombol Download CV (Berfungsi sebagai link) -->
+            <a
+              href="https://drive.google.com/drive/folders/1ex_j-on7TcWkKXJvuli7IG11sGYHObGv?usp=sharing"
+              target="_blank"
+              class="w-full mt-10 bg-primaryNavy text-white py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest hover:bg-accentBlue transition-all text-center block"
+            >
+              Download Curriculum Vitae
+            </a>
           </div>
         </div>
       </section>
-      <footer class="py-12 text-center px-6"><p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; Resume Overview</p></footer>
+      <footer class="py-12 text-center px-6">
+        <p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-300">Fatimah Azzahra &bull; Resume Overview</p>
+      </footer>
     </div>
 
     <!-- CONTENT: CONTACT -->
@@ -278,7 +422,9 @@
           <i class="far fa-envelope-open"></i>
         </div>
         <h2 class="text-4xl md:text-6xl font-extrabold text-primaryNavy mb-6 tracking-tighter italic">Let's Connect.</h2>
-        <p class="text-gray-500 max-w-lg mb-12 text-base md:text-lg font-light">Selalu terbuka untuk kolaborasi proyek data, diskusi statistik, atau sekadar berbagi wawasan industri.</p>
+        <p class="text-gray-500 max-w-lg mb-12 text-base md:text-lg font-light">
+          I'm always excited to connect with professionals, explore new opportunities, and exchange ideas about data, analytics, and business insights. Let's create something meaningful together.
+        </p>
 
         <a href="mailto:fatmhazzahra21@gmail.com" class="bg-accentBlue text-white px-12 py-5 rounded-full text-sm font-bold uppercase tracking-[0.3em] shadow-xl hover:bg-primaryNavy transition-all"> Send Me an Email </a>
       </section>
